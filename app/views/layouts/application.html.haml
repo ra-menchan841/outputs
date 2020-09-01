@@ -1,0 +1,49 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Output
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    .header
+      .header__title
+        = "あうとぷっと用"
+      .header__signin
+        .left
+          = link_to "ログイン"
+        .right
+          = link_to "新規登録"
+    .main
+      .main__memo
+        .main__memo__title
+          = "めも"
+        .main__memo__box
+          .input
+      .main__post
+        .main__post__title
+          .post-left
+            = "投稿"
+          .post-right
+            .amounts
+              = "投稿数：5件"
+            .posts-all
+              = link_to "投稿一覧へ"
+        .main__post__box
+          .input
+
+
+
+
+
+
+
+
+
+
+
+
+
+    = yield
