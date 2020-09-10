@@ -8,23 +8,37 @@
     height: 50px;
     width: 940px;
     margin-top: 10px;
+    margin-left: 10px;
     padding: 0 15px;
     border: none;
+    background-color: rgb(236, 234, 248);
   
   }
   
   .input-content {
-    height: 585px;
-    width: 940px;
-    margin-top: 10px;
+    height: 580px;
+    width: 920px;
+    margin: 10px;
     padding: 0 15px;
     padding-top: 10px;
     overflow: scroll;
     border: none;
     resize: vertical;
+    resize: horizontal;
+    background-color: rgb(236, 234, 248);
   }
   
-  
+  .btn {
+    appearance: none;
+    height: 50px;
+    width: 80px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: none;
+    background-color: rgb(56, 50, 82);
+    color: white;
+  }
   
   
 
