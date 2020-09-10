@@ -1,0 +1,7 @@
+.main__post__box
+  = form_for @post do |f|
+    .input
+      .title-btn
+        = f.text_field :title, placeholder: "タイトル", class: "input-title"
+        = f.submit "保存", class: "btn"
+      = f.text_area :content, placeholder:"本文", class: "input-content"
