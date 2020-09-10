@@ -1,3 +1,35 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.input {
+
+  .title-btn {
+    display: flex;
+  }
+
+  .input-title {
+    height: 50px;
+    width: 940px;
+    margin-top: 10px;
+    padding: 0 15px;
+    border: none;
+  
+  }
+  
+  .input-content {
+    height: 585px;
+    width: 940px;
+    margin-top: 10px;
+    padding: 0 15px;
+    padding-top: 10px;
+    overflow: scroll;
+    border: none;
+    resize: vertical;
+  }
+  
+  
+  
+  
+
+}
+
+
+
+
