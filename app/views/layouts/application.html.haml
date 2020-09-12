@@ -17,16 +17,5 @@
         .right
           = link_to "新規登録"
     .main
-      .main__index
-        .main__index__title
-          = "記事一覧"
-        .main__index__all
-          - @posts.each do |post|
-            .post-title
-              = link_to "#{post.title}", post_path(post.id)
-      .main__show
-        .main__show__title
-          = "内容"
-        .main__show__all
-          = yield 
+      = yield 
 

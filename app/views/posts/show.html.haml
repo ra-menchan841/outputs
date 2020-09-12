@@ -1,8 +1,19 @@
-.detail
-  .title-btn
-    .title
-      = "#{@title}"
-    .btn
-      = link_to "編集"
-  .content
-    = "#{@content}"
+.main__index
+  .main__index__title
+    = "記事一覧"
+    .main__index__all
+      - @posts.each do |post|
+        .post-title
+          = link_to "#{post.title}", post_path(post.id)
+.main__show
+  .main__show__title
+    = "内容"
+  .main__show__all
+    .detail
+      .title-btn
+        .title
+          = markdown(@title)
+        .btn
+          = link_to "編集"
+      .content
+        = markdown(@content)
