@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  def index
+  def new
     @post = Post.new
     @posts = Post.where(user_id: current_user.id).count
   end
@@ -11,6 +11,12 @@ class PostsController < ApplicationController
     else
       redirect_to root_path
     end
+  end
+
+  def index
+  end
+
+  def show
   end
 
   private

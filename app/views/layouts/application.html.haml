@@ -17,19 +17,5 @@
         .right
           = link_to "新規登録"
     .main
-      .main__memo
-        .main__memo__title
-          = "めも"
-        .main__memo__box
-          .input
-      .main__post
-        .main__post__title
-          .post-left
-            = "投稿"
-          .post-right
-            .amounts
-              = "投稿数：#{@posts}件"
-            .posts-all
-              = link_to "投稿一覧へ"
-        = yield
+      = yield
 
