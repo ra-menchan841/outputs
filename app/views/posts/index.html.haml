@@ -4,7 +4,7 @@
   .main__index__all
     - @posts.each do |post|
       .post-title
-        = post.title
+        = link_to "#{post.title}"
 .main__show
   .main__show__title
     = "内容"
