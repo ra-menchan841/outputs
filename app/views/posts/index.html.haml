@@ -2,8 +2,9 @@
   .main__index__title
     = "記事一覧"
   .main__index__all
-    .post-title
-      -# ここをeach文で表示させる
+    - @posts.each do |post|
+      .post-title
+        = post.title
 .main__show
   .main__show__title
     = "内容"
