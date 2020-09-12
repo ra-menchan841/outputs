@@ -10,7 +10,7 @@
   %body
     .header
       .header__title
-        = "あうとぷっと用"
+        = link_to "あうとぷっと用", destroy_user_session_path, method: :delete
       .header__signin
         .left
           = link_to "ログイン"

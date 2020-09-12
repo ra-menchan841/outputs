@@ -134,7 +134,8 @@
       .post-title {
         height: 50px;
         width: 430px;
-        background-color: yellow;
+        line-height: 50px;
+        padding-left: 10px;
       }
     }
   }
@@ -157,7 +158,6 @@
       background-color: white;
       margin: 0 auto;
       margin-top: 10px;
-      
     }
   }
 }

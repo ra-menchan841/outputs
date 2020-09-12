@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    @posts = Post.where(user_id: current_user.id).count
+    @posts = Post.where(user_id: current_user.id).count if user_signed_in?
   end
 
   def create
@@ -15,9 +15,6 @@ class PostsController < ApplicationController
     else
       redirect_to root_path
     end
-  end
-
-  def index
   end
 
   def show
