@@ -1,0 +1,25 @@
+.main__memo
+  .main__memo__title
+    = "めも"
+  .main__memo__box
+    .input
+.main__post
+  .main__post__title
+    .post-left
+      = "投稿"
+    .post-right
+      .amounts
+        - if user_signed_in?
+          = "投稿数：#{@posts}件"
+        - else
+          = "投稿数：0件"
+      .posts-all
+        = link_to posts_path do
+          = "投稿一覧へ"
+  .main__post__box
+    = form_for @post do |f|
+      .input
+        .title-btn
+          = f.text_field :title, placeholder: "タイトル", class: "input-title"
+          = f.submit "更新", class: "btn"
+        = f.text_area :content, placeholder:"本文", class: "input-content"

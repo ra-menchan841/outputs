@@ -4,8 +4,8 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
     @posts = Post.where(user_id: current_user.id).count if user_signed_in?
+    @post = Post.new
   end
 
   def create
@@ -23,6 +23,17 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @title = @post.title
     @content = @post.content
+  end
+
+  def edit
+    @posts = Post.where(user_id: current_user.id).count if user_signed_in?
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    @post.update(post_params)
+    redirect_to post_path(@post.id)
   end
 
   private
