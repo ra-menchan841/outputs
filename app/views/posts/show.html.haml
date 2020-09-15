@@ -3,8 +3,12 @@
     = "記事一覧"
     .main__index__all
       - @posts.each do |post|
-        .post-title
-          = link_to "#{post.title}", post_path(post.id)
+        .post-all
+          .post-title
+            = link_to "#{post.title}", post_path(post.id)
+          .post-delete
+            = link_to post_path(post.id), method: :delete do
+              = "削除"
 .main__show
   .main__show__title
     = "内容"

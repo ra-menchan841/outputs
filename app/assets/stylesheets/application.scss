@@ -143,16 +143,24 @@
       margin-top: 10px;
       overflow: scroll;
 
-      .post-title {
+      .post-all {
         height: 50px;
-        width: 430px;
+        width: 400px;
         line-height: 50px;
         padding-left: 10px;
+        display: flex;
+        justify-content: space-between;
 
         a {
           text-decoration: none;
           color: black;
         }
+      }
+
+      .post-title {
+        width: 350px;
+
+        
       }
     }
   }
