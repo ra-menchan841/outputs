@@ -1,3 +1,9 @@
+require 'rouge/plugins/redcarpet'
+
+class HTML < Redcarpet::Render::HTML
+  include Rouge::Plugins::Redcarpet
+end
+
 module MarkdownHelper
   def markdown(text)
     unless @markdown
@@ -13,8 +19,8 @@ module MarkdownHelper
         lax_html_blocks: true,
         strikethrough: true
       }
-      renderer = Redcarpet::Render::HTML.new(options)
-      @markdown = Redcarpet::Markdown.new(renderer)
+      renderer = HTML.new(options)
+      @markdown = Redcarpet::Markdown.new(renderer, fenced_code_blocks: true) 
     end
 
     @markdown.render(text).html_safe
