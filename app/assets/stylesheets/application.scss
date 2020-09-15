@@ -2,6 +2,15 @@
 @import "posts";
 @import 'rouge';
 
+// .notifications {
+//   color: white;
+//   text-align: center;  
+
+//   .notice {
+//     background-color: lightBlue;
+//   }
+// }
+
 .header {
   height: 50px;
   width: 100vw;
@@ -33,7 +42,7 @@
       font-size: 15px;
     }
   }
-  
+
   a {
     text-decoration: none;
     color: white;
@@ -139,6 +148,11 @@
         width: 430px;
         line-height: 50px;
         padding-left: 10px;
+
+        a {
+          text-decoration: none;
+          color: black;
+        }
       }
     }
   }

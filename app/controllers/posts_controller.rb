@@ -12,8 +12,9 @@ class PostsController < ApplicationController
     if user_signed_in?
       Post.create(post_params)
       redirect_to root_path
+      flash[:noteice] = "アウトプットしてえらい！"
     else
-      redirect_to root_path
+      redirect_to root_path, alert: "ログインしてね"
     end
   end
 
