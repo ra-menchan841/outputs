@@ -1,32 +1,28 @@
 class PostsController < ApplicationController
+  before_action :move_to_root, expect: [:new]
+  before_action :user_post_all, only: [:index, :show, :edit]
+
   def index
-    @posts = Post.where(user_id: current_user.id)
   end
 
   def new
-    @posts = Post.where(user_id: current_user.id).count if user_signed_in?
+    user_post_all if user_signed_in?
     @post = Post.new
   end
 
   def create
-    if user_signed_in?
-      Post.create(post_params)
-      redirect_to root_path
-      flash[:noteice] = "アウトプットしてえらい！"
-    else
-      redirect_to root_path, alert: "ログインしてね"
-    end
+    Post.create(post_params)
+    redirect_to root_path
+    flash[:noteice] = "アウトプットしてえらい！"
   end
 
   def show
-    @posts = Post.where(user_id: current_user.id)
     @post = Post.find(params[:id])
     @title = @post.title
     @content = @post.content
   end
 
   def edit
-    @posts = Post.where(user_id: current_user.id).count if user_signed_in?
     @post = Post.find(params[:id])
   end
 
@@ -37,10 +33,20 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = @post = Post.find(params[:id])
+    @post = Post.find(params[:id])
     @post.destroy
     redirect_to posts_path
   end
+
+
+  def move_to_root
+    redirect_to root_path unless user_signed_in?
+  end
+
+  def user_post_all
+    @posts = Post.where(user_id: current_user.id)
+  end
+
 
   private
   def post_params

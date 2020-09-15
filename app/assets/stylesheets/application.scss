@@ -24,7 +24,7 @@
   &__title {
     color: white;
     font-size: 20px;
-    width: 150px;
+    width: 250px;
     padding-left: 10px;
   }
 
@@ -100,11 +100,6 @@
         .amounts {
           width: 150px;
           font-size: 18px;
-        }
-  
-        .posts-all {
-          width: 120px;
-          font-size: 18px;
 
           a {
             text-decoration: none;
@@ -144,23 +139,44 @@
       overflow: scroll;
 
       .post-all {
-        height: 50px;
-        width: 400px;
-        line-height: 50px;
-        padding-left: 10px;
+        height: 45px;
+        width: 411px;
+        line-height: 45px;
+        margin: 10px 7px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        background-color: rgb(236, 234, 248);
+        border-radius: 5px;
 
-        a {
-          text-decoration: none;
-          color: black;
+        .post-title {
+          width: 365px;
+          font-weight: bold;
+          font-size: 16px;
+          padding-left: 8px;
+          // cursor: pointer;
+
+          a {
+            text-decoration: none;
+            color: black;
+          }
         }
-      }
 
-      .post-title {
-        width: 350px;
+        .post-delete {
+          height: 30px;
+          width: 40px;
+          font-size: 12px;
+          text-align: center;
+          line-height: 30px;
+          margin: 0 5px;
+          background-color: rgb(141, 81, 141);
+          border-radius: 5px;
 
-        
+          a {
+            text-decoration: none;
+            color: white;
+          }
+        }
       }
     }
   }

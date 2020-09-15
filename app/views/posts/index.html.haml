@@ -1,15 +1,17 @@
-.main__index
-  .main__index__title
-    = "記事一覧"
-    .main__index__all
-      - @posts.each do |post|
-        .post-all
-          .post-title
-            = link_to "#{post.title}", post_path(post.id)
-          .post-delete
-            = link_to post_path(post.id), method: :delete do
-              = "削除"
-.main__show
-  .main__show__title
-    = "内容"
-  .main__show__all
+.main
+  .main__index
+    .main__index__title
+      = "記事一覧：#{@posts.count}件"
+      .main__index__all
+        - @posts.each do |post|
+          .post-all
+            .post-title
+              = link_to post_path(post.id) do
+                = "#{post.title}"
+            .post-delete
+              = link_to post_path(post.id), method: :delete do
+                = "削除"
+  .main__show
+    .main__show__title
+      = "内容"
+    .main__show__all
