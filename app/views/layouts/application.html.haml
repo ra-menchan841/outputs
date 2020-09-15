@@ -8,9 +8,13 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    .notifications
+    - flash.each do |key, value|
+      = content_tag(:div, value, class: key)
     .header
       .header__title
-        = link_to "あうとぷっと用", destroy_user_session_path, method: :delete
+        = link_to destroy_user_session_path, method: :delete do
+          = "あうとぷっと用"
       .header__signin
         .left
           = link_to "ログイン"

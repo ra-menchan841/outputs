@@ -1,4 +1,6 @@
 .input {
+  height: calc(100vh - 120px);
+  width: calc(100vw - 470px);
 
   .title-btn {
     display: flex;
@@ -24,19 +26,19 @@
       border: none;
       background-color: rgb(56, 50, 82);
       color: white;
+      cursor: pointer;
     }
   }
 
   .input-content {
     height: 580px;
-    width: 920px;
+    width: calc(100vw - 520px);
     margin: 10px;
     padding: 0 15px;
     padding-top: 10px;
     overflow: scroll;
     border: none;
-    resize: vertical;
-    resize: horizontal;
+    resize: none;
     background-color: rgb(236, 234, 248);
   }
   
@@ -90,9 +92,12 @@
     padding-top: 10px;
     overflow: scroll;
     border: none;
-    // resize: vertical;
-    // resize: horizontal;
+    resize: none;
     background-color: rgb(236, 234, 248);
+
+    .highlight {
+      padding-left: 5px;
+    }
   }
 
 

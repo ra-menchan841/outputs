@@ -14,7 +14,8 @@
         - else
           = "投稿数：0件"
       .posts-all
-        = link_to "投稿一覧へ"
+        = link_to posts_path do
+          = "投稿一覧へ"
   .main__post__box
     = form_for @post do |f|
       .input
