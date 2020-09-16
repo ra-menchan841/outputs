@@ -1,20 +1,25 @@
-.main__index
-  .main__index__title
-    = "記事一覧"
-    .main__index__all
-      - @posts.each do |post|
-        .post-title
-          = link_to "#{post.title}", post_path(post.id)
-.main__show
-  .main__show__title
-    = "内容"
-  .main__show__all
-    .detail
-      .title-btn
-        .title
-          = markdown(@title)
-        .btn
-          = link_to edit_post_path(@post.id) do
+.main
+  .main__memo-index
+    .main__memo-index__title
+      = "記事一覧：#{@posts.count}件"
+      .main__memo-index__all
+        - @posts.each do |post|
+          .post-all
+            .post-title
+              = link_to post_path(post.id) do
+                = truncate("#{post.title}", length:23)
+            .post-delete
+              = link_to post_path(post.id), method: :delete do
+                = "削除"
+  .main__show
+    .main__show__title
+      = "内容"
+    .main__show__all
+      .detail
+        .title-btn
+          .title
+            = markdown(@title)
+          = link_to edit_post_path(@post.id), class: "btn" do
             = "編集"
-      .content
-        = markdown(@content)
+        .content
+          = markdown(@content)

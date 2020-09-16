@@ -24,7 +24,7 @@
   &__title {
     color: white;
     font-size: 20px;
-    width: 150px;
+    width: 250px;
     padding-left: 10px;
   }
 
@@ -50,15 +50,17 @@
 }
 
 .main {
-  height: calc(100vh - 50px);
+  min-height: calc(100vh - 50px);
   width: 100vw;
   display: flex;
   justify-content: space-between;
+  background-color: rgb(81, 98, 116);
 
-  &__memo {
+  // 左側のメモまた記事一覧表示
+  &__memo-index {
     height: calc(100vh - 50px);
     width: 450px;
-    background-color: rgb(81, 98, 116);
+    // background-color: rgb(81, 98, 116);
 
     &__title {
       margin: 10px;
@@ -67,6 +69,7 @@
       color: white;
     }
 
+    // new/editアクション時のメモ欄
     &__box {
       background-color: white;
       height: calc(100vh - 120px);
@@ -75,12 +78,63 @@
       margin-top: 10px;
     }
 
+    // index/showアクション時の記事一覧表示欄
+    &__all {
+      background-color: white;
+      height: calc(100vh - 120px);
+      width: 430px;
+      margin: 0 auto;
+      margin-top: 10px;
+      overflow: scroll;
+
+      .post-all {
+        height: 45px;
+        width: 411px;
+        line-height: 45px;
+        margin: 10px 7px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(236, 234, 248);
+        border-radius: 5px;
+
+        .post-title {
+          width: 365px;
+          font-weight: bold;
+          font-size: 16px;
+          padding-left: 8px;
+          // cursor: pointer;
+
+          a {
+            text-decoration: none;
+            color: black;
+          }
+        }
+
+        .post-delete {
+          height: 30px;
+          width: 40px;
+          font-size: 12px;
+          text-align: center;
+          line-height: 30px;
+          margin: 0 5px;
+          background-color: rgb(141, 81, 141);
+          border-radius: 5px;
+
+          a {
+            text-decoration: none;
+            color: white;
+          }
+        }
+      }
+    }
   }
 
+  // 右側の投稿または詳細表示欄
   &__post {
-    height: calc(100vh - 50px);
+    min-height: calc(100vh - 50px);
     width: calc(100vw - 450px);
-    background-color: rgb(81, 98, 116);
+    // background-color: rgb(81, 98, 116);
 
     &__title {
       margin: 10px;
@@ -100,11 +154,6 @@
         .amounts {
           width: 150px;
           font-size: 18px;
-        }
-  
-        .posts-all {
-          width: 120px;
-          font-size: 18px;
 
           a {
             text-decoration: none;
@@ -118,47 +167,13 @@
       height: calc(100vh - 120px);
       width: calc(100vw - 470px);
       background-color: white;
-      margin: 0 auto;
-      margin-top: 10px;
-    }
-  }
-
-  &__index {
-    height: calc(100vh - 50px);
-    width: 450px;
-    background-color: rgb(81, 98, 116);
-
-    &__title {
-      margin: 10px;
-      line-height: 30px;
-      font-size: 20px;
-      color: white;
-    }
-
-    &__all {
-      background-color: white;
-      height: calc(100vh - 120px);
-      width: 430px;
-      margin: 0 auto;
-      margin-top: 10px;
-      overflow: scroll;
-
-      .post-title {
-        height: 50px;
-        width: 430px;
-        line-height: 50px;
-        padding-left: 10px;
-
-        a {
-          text-decoration: none;
-          color: black;
-        }
-      }
+      margin: 10px auto;
+      // margin-top: 10px;
     }
   }
 
   &__show {
-    height: calc(100vh - 50px);
+    min-height: calc(100vh - 50px);
     width: calc(100vw - 450px);
     background-color: rgb(81, 98, 116);
 
@@ -170,11 +185,11 @@
     }
 
     &__all {
-      height: calc(100vh - 120px);
+      min-height: calc(100vh - 120px);
       width: calc(100vw - 470px);
       background-color: white;
-      margin: 0 auto;
-      margin-top: 10px;
+      margin: 10px auto;
+      // margin-top: 10px;
     }
   }
 }

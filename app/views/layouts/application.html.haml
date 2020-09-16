@@ -13,13 +13,19 @@
       = content_tag(:div, value, class: key)
     .header
       .header__title
-        = link_to destroy_user_session_path, method: :delete do
-          = "あうとぷっと用"
+        = "アウトプットしてえらい！"
       .header__signin
-        .left
-          = link_to "ログイン"
-        .right
-          = link_to "新規登録"
-    .main
-      = yield 
+        - if user_signed_in?
+          .left
+            = link_to root_path do
+              = "投稿する"
+          .right
+            = link_to link_to destroy_user_session_path, method: :delete do
+              = "ログアウト"
+        - else
+          .left
+            = link_to "ログイン"
+          .right
+            = link_to "新規登録"
+    = yield
 
