@@ -19,8 +19,7 @@
         .title-btn
           .title
             = markdown(@title)
-          .btn
-            = link_to edit_post_path(@post.id) do
-              = "編集"
+          = link_to edit_post_path(@post.id), class: "btn" do
+            = "編集"
         .content
           = markdown(@content)

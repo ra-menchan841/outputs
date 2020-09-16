@@ -48,8 +48,8 @@
 
 // index/showアクション時の詳細表示欄
 .detail {
-  height: calc(100vh - 120px);
-  width: calc(100vw - 470px);
+  // height: calc(100vh - 120px);
+  // width: calc(100vw - 470px);
 
   .title-btn {
     display: flex;
@@ -79,17 +79,13 @@
       line-height: 50px;
       cursor: pointer;
       border-radius: 5px;
-
-      a {
-        color: white;
-        text-decoration: none;
-      }
-      
+      color: white;
+      text-decoration: none;
     }
   }
 
   .content {
-    height: 570px;
+    min-height: 570px;
     width: calc(100vw - 520px);
     margin: 10px;
     padding: 10px 15px;

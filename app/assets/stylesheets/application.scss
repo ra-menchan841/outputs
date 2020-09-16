@@ -50,16 +50,17 @@
 }
 
 .main {
-  height: calc(100vh - 50px);
+  min-height: calc(100vh - 50px);
   width: 100vw;
   display: flex;
   justify-content: space-between;
-  
+  background-color: rgb(81, 98, 116);
+
   // 左側のメモまた記事一覧表示
   &__memo-index {
     height: calc(100vh - 50px);
     width: 450px;
-    background-color: rgb(81, 98, 116);
+    // background-color: rgb(81, 98, 116);
 
     &__title {
       margin: 10px;
@@ -131,9 +132,9 @@
 
   // 右側の投稿または詳細表示欄
   &__post {
-    height: calc(100vh - 50px);
+    min-height: calc(100vh - 50px);
     width: calc(100vw - 450px);
-    background-color: rgb(81, 98, 116);
+    // background-color: rgb(81, 98, 116);
 
     &__title {
       margin: 10px;
@@ -172,7 +173,7 @@
   }
 
   &__show {
-    height: calc(100vh - 50px);
+    min-height: calc(100vh - 50px);
     width: calc(100vw - 450px);
     background-color: rgb(81, 98, 116);
 
@@ -184,7 +185,7 @@
     }
 
     &__all {
-      height: calc(100vh - 120px);
+      min-height: calc(100vh - 120px);
       width: calc(100vw - 470px);
       background-color: white;
       margin: 10px auto;
