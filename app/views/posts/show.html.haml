@@ -1,12 +1,13 @@
 .main
-  .main__index
-    .main__index__title
+  .main__memo-index
+    .main__memo-index__title
       = "記事一覧：#{@posts.count}件"
-      .main__index__all
+      .main__memo-index__all
         - @posts.each do |post|
           .post-all
             .post-title
-              = link_to "#{post.title}", post_path(post.id)
+              = link_to post_path(post.id) do
+                = truncate("#{post.title}", length:23)
             .post-delete
               = link_to post_path(post.id), method: :delete do
                 = "削除"

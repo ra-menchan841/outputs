@@ -54,8 +54,9 @@
   width: 100vw;
   display: flex;
   justify-content: space-between;
-
-  &__memo {
+  
+  // 左側のメモまた記事一覧表示
+  &__memo-index {
     height: calc(100vh - 50px);
     width: 450px;
     background-color: rgb(81, 98, 116);
@@ -67,6 +68,7 @@
       color: white;
     }
 
+    // new/editアクション時のメモ欄
     &__box {
       background-color: white;
       height: calc(100vh - 120px);
@@ -75,61 +77,7 @@
       margin-top: 10px;
     }
 
-  }
-
-  &__post {
-    height: calc(100vh - 50px);
-    width: calc(100vw - 450px);
-    background-color: rgb(81, 98, 116);
-
-    &__title {
-      margin: 10px;
-      line-height: 30px;
-      font-size: 20px;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-
-      .post-left {
-        width: 150px;
-      }
-
-      .post-right {
-        display: flex;
-
-        .amounts {
-          width: 150px;
-          font-size: 18px;
-
-          a {
-            text-decoration: none;
-            color: white;
-          }
-        }
-      }
-    }
-
-    &__box {
-      height: calc(100vh - 120px);
-      width: calc(100vw - 470px);
-      background-color: white;
-      margin: 0 auto;
-      margin-top: 10px;
-    }
-  }
-
-  &__index {
-    height: calc(100vh - 50px);
-    width: 450px;
-    background-color: rgb(81, 98, 116);
-
-    &__title {
-      margin: 10px;
-      line-height: 30px;
-      font-size: 20px;
-      color: white;
-    }
-
+    // index/showアクション時の記事一覧表示欄
     &__all {
       background-color: white;
       height: calc(100vh - 120px);
@@ -181,6 +129,48 @@
     }
   }
 
+  // 右側の投稿または詳細表示欄
+  &__post {
+    height: calc(100vh - 50px);
+    width: calc(100vw - 450px);
+    background-color: rgb(81, 98, 116);
+
+    &__title {
+      margin: 10px;
+      line-height: 30px;
+      font-size: 20px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+
+      .post-left {
+        width: 150px;
+      }
+
+      .post-right {
+        display: flex;
+
+        .amounts {
+          width: 150px;
+          font-size: 18px;
+
+          a {
+            text-decoration: none;
+            color: white;
+          }
+        }
+      }
+    }
+
+    &__box {
+      height: calc(100vh - 120px);
+      width: calc(100vw - 470px);
+      background-color: white;
+      margin: 10px auto;
+      // margin-top: 10px;
+    }
+  }
+
   &__show {
     height: calc(100vh - 50px);
     width: calc(100vw - 450px);
@@ -197,8 +187,8 @@
       height: calc(100vh - 120px);
       width: calc(100vw - 470px);
       background-color: white;
-      margin: 0 auto;
-      margin-top: 10px;
+      margin: 10px auto;
+      // margin-top: 10px;
     }
   }
 }

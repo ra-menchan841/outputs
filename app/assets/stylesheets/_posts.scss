@@ -1,3 +1,4 @@
+// new/editアクション時の投稿・編集画面
 .input {
   height: calc(100vh - 120px);
   width: calc(100vw - 470px);
@@ -37,7 +38,7 @@
     margin: 10px;
     padding: 0 15px;
     padding-top: 10px;
-    overflow: scroll;
+    // overflow: scroll;
     border: none;
     resize: none;
     background-color: rgb(236, 234, 248);
@@ -45,7 +46,10 @@
   }
 }
 
+// index/showアクション時の詳細表示欄
 .detail {
+  height: calc(100vh - 120px);
+  width: calc(100vw - 470px);
 
   .title-btn {
     display: flex;
@@ -85,11 +89,10 @@
   }
 
   .content {
-    height: 580px;
-    width: 920px;
+    height: 570px;
+    width: calc(100vw - 520px);
     margin: 10px;
-    padding: 0 15px;
-    padding-top: 10px;
+    padding: 10px 15px;
     overflow: scroll;
     border: none;
     resize: none;
@@ -101,12 +104,9 @@
       border-radius: 5px;
       margin-top: 10px;
       margin-bottom: 10px;
+      overflow: scroll;
     }
   }
-
-
-
-
 }
 
 
