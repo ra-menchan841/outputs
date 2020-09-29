@@ -1,7 +1,6 @@
 // new/editアクション時の投稿・編集画面
 .input {
   height: calc(100vh - 120px);
-  width: calc(100vw - 470px);
 
   .title-btn {
     display: flex;
@@ -38,7 +37,6 @@
     margin: 10px;
     padding: 0 15px;
     padding-top: 10px;
-    // overflow: scroll;
     border: none;
     resize: none;
     background-color: rgb(236, 234, 248);

@@ -13,7 +13,6 @@ class PostsController < ApplicationController
   def create
     Post.create(post_params)
     redirect_to posts_path
-    flash[:noteice] = "アウトプットしてえらい！"
   end
 
   def show
@@ -44,7 +43,7 @@ class PostsController < ApplicationController
   end
 
   def user_post_all
-    @posts = Post.where(user_id: current_user.id)
+    @posts = Post.where(user_id: current_user.id).order(updated_at: :desc)
   end
 
 

@@ -2,8 +2,8 @@
   .main__memo-index
     .main__memo-index__title
       = "めも"
-    .main__memo-index__box
-      .input
+      .main__memo-index__box
+        .input
   .main__post
     .main__post__title
       .post-left
@@ -19,6 +19,6 @@
       = form_for @post do |f|
         .input
           .title-btn
-            = f.text_field :title, placeholder: "タイトル", class: "input-title"
+            = f.text_field :title, autofocus: true, placeholder: "タイトル", class: "input-title"
             = f.submit "保存", class: "btn"
-          = f.text_area :content, placeholder:"本文", class: "input-content"
+          = f.text_area :content, autofocus: true, placeholder:"本文", class: "input-content"

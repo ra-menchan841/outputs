@@ -8,12 +8,10 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    .notifications
-    - flash.each do |key, value|
-      = content_tag(:div, value, class: key)
     .header
       .header__title
-        = "アウトプットしてえらい！"
+        = link_to root_path do
+          = "アウトプットしてえらい！"
       .header__signin
         - if user_signed_in?
           .left
