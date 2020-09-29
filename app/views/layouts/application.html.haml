@@ -8,6 +8,7 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    = render "layouts/flash"
     .header
       .header__title
         = link_to root_path do
@@ -25,6 +26,5 @@
             = link_to "ログイン"
           .right
             = link_to "新規登録"
-    = render "layouts/flash"
     = yield
 

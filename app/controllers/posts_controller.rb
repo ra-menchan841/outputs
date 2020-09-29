@@ -11,8 +11,12 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(post_params)
-    redirect_to posts_path
+    @post = Post.create(post_params)
+    if @post.save
+      redirect_to posts_path, notice: 'アウトプットしたの？えらい！'
+    else
+      redirect_to posts_path, notice: '失敗しちゃった、、、＞＜'
+    end
   end
 
   def show
