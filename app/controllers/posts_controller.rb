@@ -11,8 +11,13 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(post_params)
-    redirect_to posts_path
+    @post = Post.create(post_params)
+    comment = Comment.pluck(:name).sample(8).first
+    if @post.save
+      redirect_to posts_path, notice: " #{comment} "
+    else
+      redirect_to posts_path, notice: " 保存に失敗しちゃった、、、＞＜ "
+    end
   end
 
   def show
