@@ -12,11 +12,11 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create(post_params)
-    comment = Comment.pluck(:name).sample(6).first
+    comment = Comment.pluck(:name).sample(8).first
     if @post.save
       redirect_to posts_path, notice: " #{comment} "
     else
-      redirect_to posts_path, notice: " 失敗しちゃった、、、＞＜ "
+      redirect_to posts_path, notice: " 保存に失敗しちゃった、、、＞＜ "
     end
   end
 
