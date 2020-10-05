@@ -1,0 +1,48 @@
+.main {
+  min-height: calc(100vh - 50px);
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(81, 98, 116);
+  padding-top: 50px;
+
+  // 左側のメモまた記事一覧表示
+  &__memo-index {
+    height: calc(100vh - 50px);
+    width: 450px;
+
+    &__title {
+      margin: 10px;
+      line-height: 30px;
+      font-size: 20px;
+      color: white;
+      position: fixed;
+    }
+
+    // メモ欄
+    &__box {
+      background-color: white;
+      height: calc(100vh - 120px);
+      width: 430px;
+      margin: 0 auto;
+      margin-top: 10px;
+      position: fixed;
+
+      .input {
+
+        .input-memo {
+          height: 640px;
+          width: 380px;
+          margin: 10px;
+          padding: 0 15px;
+          padding-top: 10px;
+          border: none;
+          resize: none;
+          background-color: rgb(236, 234, 248);
+          border-radius: 5px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
