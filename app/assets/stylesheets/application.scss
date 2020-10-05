@@ -2,6 +2,7 @@
 @import 'posts';
 @import 'rouge';
 @import 'flash';
+@import 'memos';
 
 // .notifications {
 //   color: white;
@@ -80,6 +81,22 @@
       margin: 0 auto;
       margin-top: 10px;
       position: fixed;
+
+      .input {
+
+        .input-memo {
+          height: 640px;
+          width: 380px;
+          margin: 10px;
+          padding: 0 15px;
+          padding-top: 10px;
+          border: none;
+          resize: none;
+          background-color: rgb(236, 234, 248);
+          border-radius: 5px;
+          font-size: 14px;
+        }
+      }
     }
 
     // index/showアクション時の記事一覧表示欄

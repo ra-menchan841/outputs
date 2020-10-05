@@ -1,9 +1,18 @@
 .main
   .main__memo-index
     .main__memo-index__title
-      = "めも"
-      .main__memo-index__box
-        .input
+      = "記事一覧：#{@posts.count}件"
+      .main__memo-index__all
+        - @posts.each do |post|
+          .post-all
+            .post-title
+              = link_to post_path(post.id) do
+                = truncate("#{post.title}", length:23)
+              .time
+                = post.updated_at.strftime("%Y年%m月%d日 %H時%M分")
+            .post-delete
+              = link_to post_path(post.id), method: :delete do
+                = "削除"
   .main__post
     .main__post__title
       .post-left

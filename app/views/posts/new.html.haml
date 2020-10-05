@@ -3,9 +3,9 @@
     .main__memo-index__title
       = "めも"
       .main__memo-index__box
-        = form_for @post do |f|
+        = form_for @memo do |f|
           .input
-            = f.text_area :memo
+            = f.text_area :content, class: "input-memo"
   .main__post
     .main__post__title
       .post-left

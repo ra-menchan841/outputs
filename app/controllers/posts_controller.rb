@@ -8,6 +8,7 @@ class PostsController < ApplicationController
   def new
     user_post_all if user_signed_in?
     @post = Post.new
+    @memo = Memo.new
   end
 
   def create
