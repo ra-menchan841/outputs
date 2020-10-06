@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :move_to_root, expect: [:new]
+  # before_action :move_to_root, expect: [:new]
   before_action :user_post_all, only: [:index, :show, :edit]
 
   def index
@@ -7,8 +7,13 @@ class PostsController < ApplicationController
 
   def new
     user_post_all if user_signed_in?
-    @post = Post.new
-    @memo = Memo.new
+    if current_user.memo.nil?
+      @post = Post.new
+      @memo = Memo.new
+    else
+      @post = Post.new
+      @memo = Memo.where(user_id: current_user.id)
+    end
   end
 
   def create
@@ -52,8 +57,8 @@ class PostsController < ApplicationController
     @posts = Post.where(user_id: current_user.id).order(updated_at: :desc)
   end
 
-
   private
+
   def post_params
     params.require(:post).permit(:title, :content).merge(user_id: current_user.id)
   end

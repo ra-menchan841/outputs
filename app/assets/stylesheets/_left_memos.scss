@@ -27,11 +27,23 @@
       margin: 0 auto;
       margin-top: 10px;
       position: fixed;
+      color: black;
+
+      .memo-submit {
+        
+        .btn {
+          height: 25px;
+          width: 40px;
+          margin-left: 380px;
+          font-size: 12px;
+
+        }
+      }
 
       .input {
 
         .input-memo {
-          height: calc(100vh - 140px);
+          height: calc(100vh - 170px);
           width: 410px;
           margin: 10px;
           // padding: 0 15px;

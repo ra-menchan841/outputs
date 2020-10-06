@@ -1,11 +1,21 @@
 .main
   .main__memo-index
     .main__memo-index__title
-      = "めも"
+      .memo-start
+        = "memo"
       .main__memo-index__box
-        = form_for @memo do |f|
-          .input
-            = f.text_area :content, class: "input-memo"
+        - if current_user.memo.nil?
+          = form_for @memo do |f|
+            .memo-submit
+              = f.submit "更新", class: "btn", id: "memo-submit-btn"
+            .input
+              = f.text_area :content, class: "input-memo"
+        - else
+          = form_for memo_path(@memo) do |f|
+            .memo-submit
+              = f.submit "更新", class: "btn", id: "memo-submit-btn"
+            .input
+              = f.text_area :content, class: "input-memo"
   .main__post
     .main__post__title
       .post-left
