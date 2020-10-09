@@ -7,13 +7,7 @@ class PostsController < ApplicationController
 
   def new
     user_post_all if user_signed_in?
-    if current_user.memo.nil?
-      @post = Post.new
-      @memo = Memo.new
-    else
-      @post = Post.new
-      @memo = Memo.where(user_id: current_user.id)
-    end
+    @post = Post.new
   end
 
   def create

@@ -5,9 +5,8 @@
       .main__memo-index__all
         - @posts.each do |post|
           .post-all
-            .post-title
-              = link_to post_path(post.id) do
-                = truncate("#{post.title}", length:23)
+            = link_to post_path(post.id), class: "post-title" do
+              = truncate("#{post.title}", length:23)
               .time
                 = post.updated_at.strftime("%Y年%m月%d日 %H時%M分")
             .post-delete
@@ -25,7 +24,7 @@
           - else
             = "投稿数：0件"
     .main__post__box
-      = form_for @post do |f|
+      = form_with model: @post, local: true, data: { persist: 'garlic' } do |f|
         .input
           .title-btn
             = f.text_field :title, autofocus: true, placeholder: "タイトル", class: "input-title"

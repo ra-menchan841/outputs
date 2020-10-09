@@ -2,20 +2,12 @@
   .main__memo-index
     .main__memo-index__title
       .memo-start
-        = "memo"
+        = "メモ"
       .main__memo-index__box
-        - if current_user.memo.nil?
-          = form_for @memo do |f|
-            .memo-submit
-              = f.submit "更新", class: "btn", id: "memo-submit-btn"
-            .input
-              = f.text_area :content, class: "input-memo"
-        - else
-          = form_for memo_path(@memo) do |f|
-            .memo-submit
-              = f.submit "更新", class: "btn", id: "memo-submit-btn"
-            .input
-              = f.text_area :content, class: "input-memo"
+        = form_with url: memos_path, local: true, data: { persist: 'garlic' } do |f|
+          = f.submit "更新", class: "btn", id: "memo-submit-btn", disabled: "disabled"
+          .input
+            = f.text_area :content, class: "input-memo"
   .main__post
     .main__post__title
       .post-left
@@ -28,9 +20,9 @@
           - else
             = "投稿数：0件"
     .main__post__box
-      = form_for @post do |f|
+      = form_with model: @post, local: true, data: { persist: 'garlic' } do |f|
         .input
           .title-btn
-            = f.text_field :title, autofocus: true, placeholder: "タイトル", class: "input-title"
+            = f.text_field :title, autofocus: true, autocomplete: "off", placeholder: "タイトル", class: "input-title"
             = f.submit "保存", class: "btn"
           = f.text_area :content, autofocus: true, placeholder:"本文", class: "input-content"
