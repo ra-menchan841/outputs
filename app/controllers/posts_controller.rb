@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  # before_action :move_to_root, expect: [:new]
+  before_action :move_to_signin, only: [:index, :new, :create, :show, :edit, :update, :destroy]
   before_action :user_post_all, only: [:index, :show, :edit]
 
   def index
@@ -43,8 +43,8 @@ class PostsController < ApplicationController
   end
 
 
-  def move_to_root
-    redirect_to root_path unless user_signed_in?
+  def move_to_signin
+    redirect_to new_user_session_path unless user_signed_in?
   end
 
   def user_post_all
