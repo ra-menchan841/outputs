@@ -7,7 +7,7 @@
   align-items: center;
 
   .devise {
-    height: 500px;
+    min-height: 350px;
     width: 500px;
     background-color: white;
     margin: 0 auto;
@@ -23,7 +23,7 @@
     }
 
     &__signup {
-      height: 400px;
+      min-height: 400px;
       width: 500px;
       padding-top: 10px;
 
@@ -47,6 +47,7 @@
         }
 
         .actions {
+          padding-bottom: 30px;
 
           .devise-btn {
             appearance: none;
@@ -62,15 +63,10 @@
             border-radius: 10px;
           }
         }
-
-      
     }
 
-
-
-
-    .devise__signin {
-      height: 400px;
+    &__signin {
+      min-height: 200px;
       width: 500px;
       padding-top: 10px;
 
@@ -109,16 +105,15 @@
           border-radius: 10px;
         }
       }
-
-
-
-
-
-
     }
-
-    
   }
 }
 
+#error_explanation {
+  height: 100px;
+  font-weight: bold;
+  font-size: 15px;
+  color: darkred;
+  
+}
 
