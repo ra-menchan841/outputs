@@ -5,26 +5,32 @@
     %title Output
     = csrf_meta_tags
     = csp_meta_tag
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
   %body
     = render "layouts/flash"
     .header
-      .header__title
-        = link_to root_path do
-          = "アウトプットしてえらい！"
-      .header__signin
-        - if user_signed_in?
+      - if user_signed_in?
+        .header__title
+          = link_to root_path do
+            = "#{current_user.nickname}さん アウトプットしてえらい！"
+        .header__signin
           .left
             = link_to root_path do
               = "投稿する"
           .right
-            = link_to link_to destroy_user_session_path, method: :delete do
+            = link_to destroy_user_session_path, method: :delete do
               = "ログアウト"
-        - else
+      - else
+        .header__title
+          = link_to root_path do
+            = "ゲストさん アウトプットしてえらい！"
+        .header__signin
           .left
-            = link_to "ログイン"
+            = link_to new_user_session_path do
+              = "ログイン"
           .right
-            = link_to "新規登録"
+            = link_to new_user_registration_path do
+              = "新規登録"
     = yield
 

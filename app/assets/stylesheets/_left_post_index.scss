@@ -1,0 +1,72 @@
+.main {
+  min-height: calc(100vh - 50px);
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(81, 98, 116);
+  padding-top: 50px;
+
+  // 左側のメモまた記事一覧表示
+  &__memo-index {
+    height: calc(100vh - 50px);
+    width: 450px;
+
+    // index/showアクション時の記事一覧表示欄
+    &__all {
+      background-color: white;
+      height: calc(100vh - 120px);
+      width: 430px;
+      margin: 0 auto;
+      margin-top: 10px;
+      overflow: scroll;
+      position: fixed;
+
+      .post-all {
+        height: 45px;
+        width: 411px;
+        line-height: 45px;
+        margin: 10px 7px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(236, 234, 248);
+        border-radius: 5px;
+
+        .post-title {
+          height: 20px;
+          width: 365px;
+          line-height: 10px;
+          font-size: 14px;
+          padding-left: 8px;
+          cursor: pointer;
+          font-weight: bold;
+          text-decoration: none;
+          color: black;
+
+          .time {
+            padding-top: 6px;
+            color: gray;
+            font-size: 7px;
+            font-weight: normal;
+          }
+        }
+
+        .post-delete {
+          height: 30px;
+          width: 40px;
+          font-size: 12px;
+          text-align: center;
+          line-height: 30px;
+          margin: 0 5px;
+          background-color: rgb(141, 81, 141);
+          border-radius: 5px;
+
+          a {
+            text-decoration: none;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

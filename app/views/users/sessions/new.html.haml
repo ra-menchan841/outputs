@@ -1,0 +1,20 @@
+.main
+  .devise
+    .devise__title
+      = "ログイン"
+    .devise__signin
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .field
+          .form-title
+            = f.label :email, "メールアドレス"
+          = f.email_field :email, autofocus: true, autocomplete: "email", class: "input"
+        .field
+          .form-title
+            = f.label :password, "パスワード"
+          = f.password_field :password, autocomplete: "current-password", class: "input"
+        -# - if devise_mapping.rememberable?
+        -#   .field
+        -#     = f.check_box :remember_me
+        -#     = f.label :remember_me
+        .actions
+          = f.submit "ログイン", class: "devise-btn"
