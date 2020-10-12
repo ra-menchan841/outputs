@@ -5,7 +5,6 @@
         = "メモ"
       .main__memo-index__box
         = form_with url: memos_path, local: true, data: { persist: 'garlic' } do |f|
-          = f.submit "メモを削除する", class: "btn", id: "memo-submit-btn"
           .input
             = f.text_area :content, class: "input-memo"
   .main__post

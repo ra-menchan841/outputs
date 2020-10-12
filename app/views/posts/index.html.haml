@@ -6,10 +6,13 @@
         - @posts.each do |post|
           .post-all
             = link_to post_path(post.id),class: "post-title" do
-              = truncate("#{post.title}", length:23)
+              - if post.title.present?
+                = truncate("#{post.title}", length:23)
+              - else
+                = "タイトルなし"
               .time
                 = post.updated_at.strftime("%Y年%m月%d日 %H時%M分")
-            .post-delete
+            .post-delete.confirm
               = link_to post_path(post.id), method: :delete do
                 = "削除"
   .main__show
