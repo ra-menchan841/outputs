@@ -44,9 +44,8 @@
 
   // 記事詳細
   &__show {
-    height: calc(100vh - 50px);
+    min-height: calc(100vh - 50px);
     width: calc(100vw - 450px);
-    background-color: rgb(81, 98, 116);
 
     &__title {
       margin: 10px;

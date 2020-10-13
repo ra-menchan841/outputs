@@ -9,7 +9,7 @@
       @include title;
     }
 
-    // index/showアクション時の記事一覧表示欄
+    // index/show/editアクション時の記事一覧表示欄
     &__all {
       @include leftBox;
 
