@@ -1,43 +1,19 @@
 .main {
-  min-height: calc(100vh - 50px);
-  width: 100vw;
-  display: flex;
-  justify-content: space-between;
-  background-color: rgb(81, 98, 116);
-  padding-top: 50px;
+  @include mainBox;
 
-  // 左側のメモまた記事一覧表示
+  // 画面左側
   &__memo-index {
-    height: calc(100vh - 50px);
-    width: 450px;
+    @include memoIndex;
 
     &__title {
-      margin: 10px;
-      line-height: 30px;
-      font-size: 20px;
-      color: white;
-      position: fixed;
+      @include title;
     }
 
     // メモ欄
     &__box {
-      background-color: white;
-      height: calc(100vh - 120px);
-      width: 430px;
-      margin: 0 auto;
-      margin-top: 10px;
-      position: fixed;
+      @include leftBox;
       color: black;
       position: relative;
-
-      .btn {
-        height: 25px;
-        width: 100px;
-        margin-top: -34px;
-        margin-left: 325px;
-        font-size: 12px;
-
-      }
 
       .input {
 
@@ -45,8 +21,6 @@
           height: calc(100vh - 170px);
           width: 410px;
           margin: 10px;
-          // padding: 0 15px;
-          // padding-top: 10px;
           border: none;
           resize: none;
           font-size: 14px;
