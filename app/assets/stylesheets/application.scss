@@ -1,5 +1,9 @@
+@import 'reset';
+@import 'header';
+@import 'flash';
+
 @mixin mainBox {
-  height: calc(100vh - 50px);
+  min-height: calc(100vh - 50px);
   width: 100vw;
   display: flex;
   justify-content: space-between;
@@ -30,13 +34,9 @@
   position: fixed;
 }
 
-
-@import 'reset';
-@import 'header';
 @import 'users';
 @import 'new';
 @import 'index';
 @import 'show';
 @import 'edit';
 @import 'rouge';
-@import 'flash';
