@@ -1,5 +1,5 @@
 @mixin mainBox {
-  min-height: calc(100vh - 50px);
+  height: calc(100vh - 50px);
   width: 100vw;
   display: flex;
   justify-content: space-between;
@@ -34,9 +34,9 @@
 @import 'reset';
 @import 'header';
 @import 'users';
-@import 'left_memos';
-@import 'right_new_edit';
-@import 'left_post_index';
-@import 'right_index_show';
+@import 'new';
+@import 'index';
+@import 'show';
+@import 'edit';
 @import 'rouge';
 @import 'flash';

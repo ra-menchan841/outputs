@@ -1,0 +1,183 @@
+.main {
+  @include mainBox;
+
+  // 画面左側
+  &__memo-index {
+    @include memoIndex;
+
+    &__title {
+      @include title;
+    }
+
+    // index/show/editアクション時の記事一覧表示欄
+    &__all {
+      @include leftBox;
+
+      .post-all {
+        height: 45px;
+        width: 411px;
+        line-height: 45px;
+        margin: 10px 7px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(236, 234, 248);
+        border-radius: 5px;
+
+        .post-title {
+          height: 20px;
+          width: 365px;
+          line-height: 10px;
+          font-size: 14px;
+          padding-left: 8px;
+          cursor: pointer;
+          font-weight: bold;
+          text-decoration: none;
+          color: black;
+
+          .time {
+            padding-top: 6px;
+            color: gray;
+            font-size: 7px;
+            font-weight: normal;
+          }
+        }
+
+        .post-delete {
+          height: 30px;
+          width: 40px;
+          font-size: 12px;
+          text-align: center;
+          line-height: 30px;
+          margin: 0 5px;
+          background-color: rgb(141, 81, 141);
+          border-radius: 5px;
+
+          a {
+            text-decoration: none;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  // 画面右側
+  &__post {
+    height: calc(100vh - 50px);
+    width: calc(100vw - 450px);
+
+    &__title {
+      margin: 10px;
+      line-height: 30px;
+      font-size: 20px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+
+      .post-left {
+        width: 150px;
+      }
+
+      .post-right {
+        display: flex;
+
+        .amounts {
+          width: 150px;
+          font-size: 18px;
+
+          a {
+            text-decoration: none;
+            color: white;
+          }
+        }
+      }
+    }
+
+    &__box {
+      height: calc(100vh - 120px);
+      width: calc(100vw - 470px);
+      background-color: white;
+      margin: 10px auto;
+      // margin-top: 10px;
+    }
+  }
+
+  // 記事詳細
+  &__show {
+    height: calc(100vh - 50px);
+    width: calc(100vw - 450px);
+
+    &__title {
+      margin: 10px;
+      line-height: 30px;
+      font-size: 20px;
+      color: white;
+    }
+
+    &__all {
+      height: calc(100vh - 120px);
+      width: calc(100vw - 470px);
+      background-color: white;
+      margin: 10px auto;
+
+      .detail {
+        height: calc(100vh - 120px);
+      
+        .title-btn {
+          display: flex;
+      
+          .title {
+            height: 50px;
+            width: 940px;
+            margin-top: 10px;
+            margin-left: 10px;
+            padding: 0 15px;
+            border: none;
+            background-color: rgb(236, 234, 248);
+            line-height: 50px;
+            border-radius: 5px;
+          }
+      
+          .btn {
+            // appearance: none;
+            height: 50px;
+            width: 80px;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            border: none;
+            background-color: rgb(56, 50, 82);
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+          }
+        }
+      
+        // マークダウン＆シンタックスハイライト
+        .content {
+          height: 570px;
+          width: calc(100vw - 520px);
+          margin: 10px;
+          padding: 10px 15px;
+          overflow: scroll;
+          border: none;
+          resize: none;
+          background-color: rgb(236, 234, 248);
+          border-radius: 5px;
+      
+          .highlight {
+            padding: 2px 5px;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            overflow: scroll;
+          }
+        }
+      }
+    }
+  }
+}

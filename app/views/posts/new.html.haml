@@ -1,8 +1,7 @@
 .main
   .main__memo-index
     .main__memo-index__title
-      .memo-start
-        = "メモ"
+      = "メモ"
       .main__memo-index__box
         = form_with url: memos_path, local: true, data: { persist: 'garlic' } do |f|
           .input
