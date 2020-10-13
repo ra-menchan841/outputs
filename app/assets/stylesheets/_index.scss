@@ -64,7 +64,7 @@
 
   // 画面右側
   &__post {
-    min-height: calc(100vh - 50px);
+    height: calc(100vh - 50px);
     width: calc(100vw - 450px);
 
     &__title {
@@ -95,30 +95,11 @@
     }
 
     &__box {
-      min-height: calc(100vh - 120px);
+      height: calc(100vh - 120px);
       width: calc(100vw - 470px);
       background-color: white;
       margin: 10px auto;
     }
   }
 
-  // 記事詳細
-  &__show {
-    min-height: calc(100vh - 50px);
-    width: calc(100vw - 450px);
-
-    &__title {
-      margin: 10px;
-      line-height: 30px;
-      font-size: 20px;
-      color: white;
-    }
-
-    &__all {
-      min-height: calc(100vh - 120px);
-      width: calc(100vw - 470px);
-      background-color: white;
-      margin: 10px auto;
-    }
-  }
 }

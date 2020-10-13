@@ -1,51 +1,11 @@
 .main {
   @include mainBox;
 
-  // 画面右側
-  &__post {
-    min-height: calc(100vh - 50px);
-    width: calc(100vw - 450px);
-
-    &__title {
-      margin: 10px;
-      line-height: 30px;
-      font-size: 20px;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-
-      .post-left {
-        width: 150px;
-      }
-
-      .post-right {
-        display: flex;
-
-        .amounts {
-          width: 150px;
-          font-size: 18px;
-
-          a {
-            text-decoration: none;
-            color: white;
-          }
-        }
-      }
-    }
-
-    &__box {
-      height: calc(100vh - 120px);
-      width: calc(100vw - 470px);
-      background-color: white;
-      margin: 10px auto;
-      // margin-top: 10px;
-    }
-  }
-
   // 記事詳細
   &__show {
     min-height: calc(100vh - 50px);
     width: calc(100vw - 450px);
+    margin-bottom: 10px;
 
     &__title {
       margin: 10px;
@@ -61,6 +21,7 @@
       margin: 10px auto;
 
       .detail {
+        padding-bottom: 1px;
       
         .title-btn {
           display: flex;
