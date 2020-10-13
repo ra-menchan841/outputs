@@ -1,16 +1,10 @@
 .main {
-  min-height: calc(100vh - 50px);
-  width: 100vw;
-  display: flex;
-  justify-content: space-between;
-  background-color: rgb(81, 98, 116);
-  padding-top: 50px;
+  @include mainBox;
 
-  // 右側の投稿または詳細表示欄
+  // 画面右側
   &__post {
     min-height: calc(100vh - 50px);
     width: calc(100vw - 450px);
-    // background-color: rgb(81, 98, 116);
 
     &__title {
       margin: 10px;
@@ -40,7 +34,7 @@
     }
 
     &__box {
-      height: calc(100vh - 120px);
+      min-height: calc(100vh - 120px);
       width: calc(100vw - 470px);
       background-color: white;
       margin: 10px auto;
@@ -48,8 +42,9 @@
     }
   }
 
+  // 記事詳細
   &__show {
-    min-height: calc(100vh - 50px);
+    height: calc(100vh - 50px);
     width: calc(100vw - 450px);
     background-color: rgb(81, 98, 116);
 
@@ -67,8 +62,7 @@
       margin: 10px auto;
 
       .detail {
-        // height: calc(100vh - 120px);
-        // width: calc(100vw - 470px);
+        min-height: calc(100vh - 120px);
       
         .title-btn {
           display: flex;
