@@ -1,0 +1,7 @@
+.main__memo-index
+  .main__memo-index__title
+    = "メモ"
+    .main__memo-index__box
+      = form_with url: memos_path, local: true, data: { persist: 'garlic' } do |f|
+        .input
+          = f.text_area :content, class: "input-memo"

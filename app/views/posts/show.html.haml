@@ -1,20 +1,5 @@
 .main
-  .main__memo-index
-    .main__memo-index__title
-      = "記事一覧：#{@posts.count}件"
-      .main__memo-index__all
-        - @posts.each do |post|
-          .post-all
-            = link_to post_path(post.id),class: "post-title" do
-              - if post.title.present?
-                = truncate("#{post.title}", length:23)
-              - else
-                = "タイトルなし"
-              .time
-                = post.updated_at.strftime("%Y年%m月%d日 %H時%M分")
-            .post-delete.confirm
-              = link_to post_path(post.id), method: :delete do
-                = "削除"
+  = render partial: "allPosts", locals: { posts: @posts }
   .main__show
     .main__show__title
       = "内容"
@@ -22,8 +7,8 @@
       .detail
         .title-btn
           .title
-            = markdown(@title)
+            = markdown(@post.title)
           = link_to edit_post_path(@post.id), class: "btn" do
             = "編集"
         .content
-          = markdown(@content)
+          = markdown(@post.content)
