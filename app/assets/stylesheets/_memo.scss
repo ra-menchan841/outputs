@@ -1,0 +1,33 @@
+.main {
+  @include mainBox;
+
+  // 画面左側、メモ欄
+  &__memo-index {
+    @include memoIndex;
+
+    &__title {
+      @include title;
+    }
+
+    &__box {
+      @include leftBox;
+      color: black;
+      position: relative;
+
+      .input {
+        height: calc(100vh - 120px);
+
+        .input-memo {
+          height: calc(100vh - 140px);
+          width: 410px;
+          margin: 10px;
+          border: none;
+          resize: none;
+          font-size: 14px;
+          outline: 0px none black;
+          overflow: scroll;
+        }
+      }
+    }
+  }
+}

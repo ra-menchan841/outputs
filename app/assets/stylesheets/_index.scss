@@ -1,15 +1,15 @@
 .main {
   @include mainBox;
 
-  // 画面左側
+  // 画面左側、newアクション時以外の記事一覧表示欄
   &__memo-index {
     @include memoIndex;
 
     &__title {
       @include title;
+      position: fixed;
     }
 
-    // index/show/editアクション時の記事一覧表示欄
     &__all {
       @include leftBox;
 
@@ -61,45 +61,4 @@
       }
     }
   }
-
-  // 画面右側
-  &__post {
-    height: calc(100vh - 50px);
-    width: calc(100vw - 450px);
-
-    &__title {
-      margin: 10px;
-      line-height: 30px;
-      font-size: 20px;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-
-      .post-left {
-        width: 150px;
-      }
-
-      .post-right {
-        display: flex;
-
-        .amounts {
-          width: 150px;
-          font-size: 18px;
-
-          a {
-            text-decoration: none;
-            color: white;
-          }
-        }
-      }
-    }
-
-    &__box {
-      height: calc(100vh - 120px);
-      width: calc(100vw - 470px);
-      background-color: white;
-      margin: 10px auto;
-    }
-  }
-
 }

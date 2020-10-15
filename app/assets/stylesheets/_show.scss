@@ -1,61 +1,34 @@
 .main {
   @include mainBox;
 
-  // 記事詳細
+  // 画面右側、記事詳細表示
   &__show {
     min-height: calc(100vh - 50px);
     width: calc(100vw - 450px);
     margin-bottom: 10px;
 
     &__title {
-      margin: 10px;
-      line-height: 30px;
-      font-size: 20px;
-      color: white;
+      @include title;
     }
 
     &__all {
-      min-height: calc(100vh - 120px);
-      width: calc(100vw - 470px);
-      background-color: white;
-      margin: 10px auto;
+      @include rightBox;
 
       .detail {
         padding-bottom: 1px;
       
         .title-btn {
           display: flex;
-      
+
           .title {
-            height: 50px;
-            width: 940px;
-            margin-top: 10px;
-            margin-left: 10px;
-            padding: 0 15px;
-            border: none;
-            background-color: rgb(236, 234, 248);
-            line-height: 50px;
-            border-radius: 5px;
+            @include postTitle;
           }
-      
+
           .btn {
-            // appearance: none;
-            height: 50px;
-            width: 80px;
-            margin-top: 10px;
-            margin-left: 10px;
-            margin-right: 10px;
-            border: none;
-            background-color: rgb(56, 50, 82);
-            text-align: center;
-            line-height: 50px;
-            cursor: pointer;
-            border-radius: 5px;
-            color: white;
-            text-decoration: none;
+            @include newEditBtn;
           }
         }
-      
+
         // マークダウン＆シンタックスハイライト
         .content {
           min-height: 570px;
@@ -67,7 +40,7 @@
           resize: none;
           background-color: rgb(236, 234, 248);
           border-radius: 5px;
-      
+
           .highlight {
             padding: 2px 5px;
             border-radius: 5px;
