@@ -51,7 +51,7 @@
 // 記事の保存、編集、更新ボタン
 @mixin newEditBtn {
   height: 50px;
-  width: 80px;
+  width: 60px;
   margin: 10px 10px 0 10px;
   line-height: 50px;
   border: none;
@@ -66,7 +66,7 @@
 // 画面右側、記事タイトル部分
 @mixin postTitle {
   height: 50px;
-  width: 940px;
+  width: calc(100vw - 590px);
   margin-top: 10px;
   margin-left: 10px;
   padding: 0 15px;
