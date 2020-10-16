@@ -9,28 +9,6 @@
     = javascript_include_tag 'application'
   %body
     = render "layouts/flash"
-    .header
-      - if user_signed_in?
-        .header__title
-          = link_to root_path do
-            = "#{current_user.nickname}さん アウトプットしてえらい！"
-        .header__signin
-          .left
-            = link_to root_path do
-              = "投稿する"
-          .right
-            = link_to destroy_user_session_path, method: :delete do
-              = "ログアウト"
-      - else
-        .header__title
-          = link_to root_path do
-            = "ゲストさん アウトプットしてえらい！"
-        .header__signin
-          .left
-            = link_to new_user_session_path do
-              = "ログイン"
-          .right
-            = link_to new_user_registration_path do
-              = "新規登録"
+    = render "layouts/header"
     = yield
 

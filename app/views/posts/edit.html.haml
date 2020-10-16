@@ -1,35 +1,3 @@
 .main
-  .main__memo-index
-    .main__memo-index__title
-      = "記事一覧：#{@posts.count}件"
-      .main__memo-index__all
-        - @posts.each do |post|
-          .post-all
-            = link_to post_path(post.id), class: "post-title" do
-              - if post.title.present?
-                = truncate("#{post.title}", length:23)
-              - else
-                = "タイトルなし"
-              .time
-                = post.updated_at.strftime("%Y年%m月%d日 %H時%M分")
-            .post-delete
-              = link_to post_path(post.id), method: :delete do
-                = "削除"
-  .main__post
-    .main__post__title
-      .post-left
-        = "投稿"
-      .post-right
-        .amounts
-          - if user_signed_in?
-            = link_to posts_path do
-              = "記事一覧：#{@posts.count}件"
-          - else
-            = "投稿数：0件"
-    .main__post__box
-      = form_with model: @post, local: true, data: { persist: 'garlic' } do |f|
-        .input
-          .title-btn
-            = f.text_field :title, autofocus: true, autocomplete: "off", placeholder: "タイトル", class: "input-title"
-            = f.submit "更新", class: "btn"
-          = f.text_area :content, autofocus: true, placeholder:"マークダウンが使えます", class: "input-content"
+  = render partial: "allPosts", locals: { posts: @posts }
+  = render partial: "form", locals: { posts: @posts, post: @post, btn: @btn }

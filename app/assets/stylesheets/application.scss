@@ -1,9 +1,84 @@
 @import 'reset';
 @import 'header';
-@import 'users';
-@import 'left_post_index';
-@import 'left_memos';
-@import 'right_new_edit';
-@import 'right_index_show';
-@import 'rouge';
 @import 'flash';
+@import 'rouge';
+
+
+
+// ヘッダー以下の全体
+@mixin mainBox {
+  min-height: calc(100vh - 50px);
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(81, 98, 116);
+  padding-top: 50px;
+}
+
+// 画面左側全体
+@mixin memoIndex {
+  height: calc(100vh - 50px);
+  width: 450px;
+}
+
+// メモ、投稿、記事一覧、内容など白文字のタイトル部分
+@mixin title {
+  margin: 10px;
+  line-height: 30px;
+  font-size: 20px;
+  color: white;
+}
+
+// 画面左側、メモまたは記事タイトル一覧表示のボックス
+@mixin leftBox {
+  height: calc(100vh - 120px);
+  width: 430px;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 10px;
+  overflow: scroll;
+  position: fixed;
+}
+
+// 画面右側、新規投稿、編集、詳細表示のボックス
+@mixin rightBox {
+  min-height: calc(100vh - 120px);
+  width: calc(100vw - 470px);
+  background-color: white;
+  margin: 10px auto;
+}
+
+// 記事の保存、編集、更新ボタン
+@mixin newEditBtn {
+  height: 50px;
+  width: 80px;
+  margin: 10px 10px 0 10px;
+  line-height: 50px;
+  border: none;
+  background-color: rgb(56, 50, 82);
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+// 画面右側、記事タイトル部分
+@mixin postTitle {
+  height: 50px;
+  width: 940px;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 0 15px;
+  border: none;
+  background-color: rgb(236, 234, 248);
+  border-radius: 5px;
+  outline: none;
+  line-height: 50px;
+}
+
+@import 'users';
+@import 'memo';
+@import 'new-edit';
+@import 'index';
+@import 'show';

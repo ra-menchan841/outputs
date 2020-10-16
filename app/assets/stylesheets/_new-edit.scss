@@ -1,0 +1,66 @@
+.main {
+  @include mainBox;
+
+  // 画面右側、記事投稿・編集欄
+  &__post {
+    min-height: calc(100vh - 50px);
+    width: calc(100vw - 450px);
+
+    &__title {
+      @include title;
+      display: flex;
+      justify-content: space-between;
+
+      .post-left {
+        width: 150px;
+      }
+
+      .post-right {
+        display: flex;
+
+        .amounts {
+          width: 150px;
+          font-size: 18px;
+
+          a {
+            text-decoration: none;
+            color: white;
+          }
+        }
+      }
+    }
+
+    &__box {
+      @include rightBox;
+
+      .input {
+        height: calc(100vh - 120px);
+      
+        .title-btn {
+          display: flex;
+      
+          .input-title {
+            @include postTitle;
+          }
+      
+          .btn {
+            @include newEditBtn;
+          }
+        }
+      
+        .input-content {
+          height: 580px;
+          width: calc(100vw - 520px);
+          margin: 10px;
+          padding: 0 15px;
+          padding-top: 10px;
+          border: none;
+          resize: none;
+          background-color: rgb(236, 234, 248);
+          border-radius: 5px;
+          outline: 0px none black;
+        }
+      }
+    }
+  }
+}

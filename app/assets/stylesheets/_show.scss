@@ -1,0 +1,55 @@
+.main {
+  @include mainBox;
+
+  // 画面右側、記事詳細表示
+  &__show {
+    min-height: calc(100vh - 50px);
+    width: calc(100vw - 450px);
+    margin-bottom: 10px;
+
+    &__title {
+      @include title;
+    }
+
+    &__all {
+      @include rightBox;
+
+      .detail {
+        padding-bottom: 1px;
+      
+        .title-btn {
+          display: flex;
+
+          .title {
+            @include postTitle;
+          }
+
+          .btn {
+            @include newEditBtn;
+          }
+        }
+
+        // マークダウン＆シンタックスハイライト
+        .content {
+          min-height: 570px;
+          width: calc(100vw - 520px);
+          margin: 10px;
+          padding: 10px 15px;
+          overflow: scroll;
+          border: none;
+          resize: none;
+          background-color: rgb(236, 234, 248);
+          border-radius: 5px;
+
+          .highlight {
+            padding: 2px 5px;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            overflow: scroll;
+          }
+        }
+      }
+    }
+  }
+}

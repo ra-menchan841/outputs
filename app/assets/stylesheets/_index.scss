@@ -1,25 +1,17 @@
 .main {
-  min-height: calc(100vh - 50px);
-  width: 100vw;
-  display: flex;
-  justify-content: space-between;
-  background-color: rgb(81, 98, 116);
-  padding-top: 50px;
+  @include mainBox;
 
-  // 左側のメモまた記事一覧表示
+  // 画面左側、newアクション時以外の記事一覧表示欄
   &__memo-index {
-    height: calc(100vh - 50px);
-    width: 450px;
+    @include memoIndex;
 
-    // index/showアクション時の記事一覧表示欄
-    &__all {
-      background-color: white;
-      height: calc(100vh - 120px);
-      width: 430px;
-      margin: 0 auto;
-      margin-top: 10px;
-      overflow: scroll;
+    &__title {
+      @include title;
       position: fixed;
+    }
+
+    &__all {
+      @include leftBox;
 
       .post-all {
         height: 45px;

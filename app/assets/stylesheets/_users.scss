@@ -1,4 +1,48 @@
-.main {
+// ユーザー新規登録、ログイン画面のデザイン用
+@mixin deviseDesign {
+  .field {
+    height: 80px;
+    width: 250px;
+    margin: 0 auto;
+
+    .form-title {
+      height: 30px;
+      width: 130px;
+      display: flex;
+      align-items: start;
+    }
+
+    .input {
+      height: 25px;
+      width: 245px;
+      padding-left: 5px;
+    }
+  }
+
+  .actions {
+    padding-bottom: 30px;
+
+    .devise-btn {
+      appearance: none;
+      height: 40px;
+      width: 80px;
+      margin-top: 8px;
+      margin-left: 8px;
+      margin-right: 8px;
+      border: none;
+      background-color: rgb(56, 50, 82);
+      color: white;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+  }
+}
+
+
+
+
+// ユーザー新規登録、ログイン画面の全体
+.devise-main {
   min-height: calc(100vh - 50px);
   width: 100vw;
   background-color: rgb(81, 98, 116);
@@ -22,89 +66,20 @@
       border-color: rgb(81, 98, 116);
     }
 
+    // 新規登録
     &__signup {
       min-height: 400px;
       width: 500px;
       padding-top: 10px;
-
-        .field {
-          height: 80px;
-          width: 250px;
-          margin: 0 auto;
-
-          .form-title {
-            height: 30px;
-            width: 130px;
-            display: flex;
-            align-items: start;
-          }
-
-          .input {
-            height: 25px;
-            width: 245px;
-            padding-left: 5px;
-          }
-        }
-
-        .actions {
-          padding-bottom: 30px;
-
-          .devise-btn {
-            appearance: none;
-            height: 40px;
-            width: 80px;
-            margin-top: 8px;
-            margin-left: 8px;
-            margin-right: 8px;
-            border: none;
-            background-color: rgb(56, 50, 82);
-            color: white;
-            cursor: pointer;
-            border-radius: 10px;
-          }
-        }
+      @include deviseDesign;
     }
 
+    // ログイン
     &__signin {
       min-height: 200px;
       width: 500px;
       padding-top: 10px;
-
-      .field {
-        height: 80px;
-        width: 250px;
-        margin: 0 auto;
-
-        .form-title {
-          height: 30px;
-          width: 130px;
-          display: flex;
-          align-items: start;
-        }
-
-        .input {
-          height: 25px;
-          width: 245px;
-          padding-left: 5px;
-        }
-      }
-
-      .actions {
-
-        .devise-btn {
-          appearance: none;
-          height: 40px;
-          width: 80px;
-          margin-top: 8px;
-          margin-left: 8px;
-          margin-right: 8px;
-          border: none;
-          background-color: rgb(56, 50, 82);
-          color: white;
-          cursor: pointer;
-          border-radius: 10px;
-        }
-      }
+      @include deviseDesign;
     }
   }
 }
