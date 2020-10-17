@@ -7,7 +7,7 @@
         = render "users/shared/error_messages", resource: resource
         .field
           .form-title
-            = f.label :nickname, "ニックネーム"
+            = f.label :nickname, "ニックネーム(15文字以内)"
           = f.text_field :nickname, autofocus: true, autocomplete: "nickname", class: "input"
         .field
           .form-title
@@ -15,7 +15,7 @@
           = f.email_field :email, autofocus: true, autocomplete: "email", class: "input"
         .field
           .form-title
-            = f.label :password, "パスワード"
+            = f.label :password, "パスワード(6桁以上)"
           = f.password_field :password, autocomplete: "new-password", class: "input"
         .field
           .form-title
