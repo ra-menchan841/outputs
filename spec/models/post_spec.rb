@@ -2,11 +2,7 @@ require 'rails_helper'
 
 describe Post, type: :model do
   describe '#create' do
-
-    before do
-      user = create(:user)
-    end
-    
+  
       # 1
       it "titleとcontentがあれば登録できること" do
         post = build(:post)

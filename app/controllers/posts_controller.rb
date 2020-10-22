@@ -18,11 +18,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.create(post_params)
     comment = Comment.pluck(:name).sample(8).first
-    if @post.save
-      redirect_to posts_path, notice: " #{comment} "
-    else
-      redirect_to posts_path, notice: " 保存失敗、、、 "
-    end
+    redirect_to posts_path, notice: " #{comment} "
   end
 
   # 記事タイトル一覧表示、および詳細表示

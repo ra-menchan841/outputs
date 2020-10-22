@@ -1,8 +1,9 @@
 FactoryBot.define do
 
   factory :post do
-    title              {"アイウエオ"}
+    title              {Faker::Lorem.sentence}
     content            {"カキクケコ"}
-    user_id            {1}
+    user
+    created_at         { Faker::Time.between(from: DateTime.now - 2, to: DateTime.now) }
   end
 end
