@@ -34,6 +34,7 @@ describe PostsController, type: :controller do
       end
 
       it "@postに期待した値が入っていること" do
+        get :new
         expect(assigns(:post)).to be_a_new(Post)
       end
     end
