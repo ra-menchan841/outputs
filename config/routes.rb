@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   end
   
   root to: 'posts#new'
-  resources :posts, only: [:new, :index, :create, :show, :edit, :update, :destroy]
+  resources :posts
   resources :memos, only: [:create]
 end
