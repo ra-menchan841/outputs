@@ -104,6 +104,8 @@ DB：MySQL
 - has_one :memo
 
 
+以下、現時点では未使用のテーブル
+
 ## memosテーブル
 
 |Column|Type|Options|
