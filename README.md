@@ -70,7 +70,7 @@ URL：https://programing-learning-note.herokuapp.com/
 メモはリロードの際に消えてしまわないよう、プラグインを導入しローカルストレージに保存されるように致しました。  
 
 ## 使用技術
-言語：Ruby
+言語：Ruby  
 フレームワーク：Ruby on Rails  
 Gem：redcarpet, rouge  
 プラグイン：Garlic.js  
