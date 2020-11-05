@@ -2,7 +2,7 @@
   - if user_signed_in?
     .header__title
       = link_to root_path do
-        = "#{current_user.nickname}さん アウトプットしてえらい！"
+        = "#{current_user.nickname}さん のプログラミング学習ノート"
     .header__signin
       .left
         = link_to root_path do
@@ -13,7 +13,7 @@
   - else
     .header__title
       = link_to root_path do
-        = "ゲストさん アウトプットしてえらい！"
+        = "ゲストさん のプログラミング学習ノート"
     .header__signin
       .left
         = link_to new_user_session_path do
