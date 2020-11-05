@@ -35,6 +35,8 @@ URL：https://programing-learning-note.herokuapp.com/
 ### 記事投稿後に褒め言葉が表示される機能
 記事を投稿した際、あらかじめ設定している褒め言葉がランダムで表示されます。  
 
+[![Image from Gyazo](https://i.gyazo.com/2bf6d2783a64512b378e5132e71306db.gif)](https://gyazo.com/2bf6d2783a64512b378e5132e71306db)
+
 ### 投稿記事数の表示
 投稿した記事数が表示されます。  
 
@@ -44,17 +46,25 @@ URL：https://programing-learning-note.herokuapp.com/
 ### 記事詳細表示
 投稿した記事のタイトルを選択すると、詳細が確認できます。  
 
+[![Image from Gyazo](https://i.gyazo.com/f8f77715a234b0884728fef7164ed458.gif)](https://gyazo.com/f8f77715a234b0884728fef7164ed458)
+
 ### 記事編集
 投稿した記事の編集・更新ができます。  
 
+[![Image from Gyazo](https://i.gyazo.com/21d3cf109075c931739523f6c91cb91a.gif)](https://gyazo.com/21d3cf109075c931739523f6c91cb91a)
+
 ### 記事削除
 投稿した記事の削除ができます。  
+
+[![Image from Gyazo](https://i.gyazo.com/9a6c43f5c3c52474ef7f0e598d53659c.gif)](https://gyazo.com/9a6c43f5c3c52474ef7f0e598d53659c)
 
 ### メモ機能
 記事の新規投稿画面にて、左側に存在します。  
 新規投稿時にちょっとしたメモや下書きを残しておくことができます。  
 メモはローカルストレージに保存されるため、リロードしても内容を保持できます。  
 使用したプラグイン：Garlic.js  
+
+[![Image from Gyazo](https://i.gyazo.com/fc53ba0eea89fecb98cb970d9fbf25b1.gif)](https://gyazo.com/fc53ba0eea89fecb98cb970d9fbf25b1)
 
 ## 工夫した点
 メモはリロードの際に消えてしまわないよう、プラグインを導入しローカルストレージに保存されるように致しました。  
