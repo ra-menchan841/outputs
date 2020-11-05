@@ -12,9 +12,9 @@
 - 収集癖：自身の投稿した記事数が数字で可視化されます。  
 
 ## 本番環境
-URL：  
-テスト用メールアドレス：  
-テスト用パスワード：  
+URL：https://programing-learning-note.herokuapp.com/  
+テスト用メールアドレス：test@test.com  
+テスト用パスワード：testaccount  
 
 ## 制作背景
 - アウトプットへのモチベーションを高める  
@@ -64,7 +64,6 @@ URL：
 フレームワーク：Ruby on Rails  
 Gem：redcarpet, rouge  
 プラグイン：Garlic.js  
-OS：  
 DB：MySQL  
 サーバー：Heroku  
 
