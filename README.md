@@ -1,6 +1,7 @@
 # README
 
 ## アプリ名
+プログラミング学習ノート
 
 
 ## アプリケーション概要
@@ -102,6 +103,13 @@ DB：MySQL
 ### Association
 - has_many :posts
 - has_one :memo
+
+## commentsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+
 
 
 以下、現時点では未使用のテーブル
